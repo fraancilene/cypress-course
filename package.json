@@ -1,0 +1,32 @@
+{
+  "name": "cypress-basic",
+  "version": "1.0.0",
+  "description": "curso de cypress",
+  "main": "src/index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "test": "cypress run"
+  },
+
+  "keywords": [
+    "Testing",
+    "Cypress.io",
+    "Talking About Testing",
+    "Cypress Básico",
+    "Escola TAT"
+  ],
+
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fraancilene/cypress-course.git"
+  },
+  "author": "Francilene Silva",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fraancilene/cypress-course/issues"
+  },
+  "homepage": "https://github.com/fraancilene/cypress-course#readme",
+  "devDependencies": {
+    "cypress": "^9.5.1"
+  }
+}
