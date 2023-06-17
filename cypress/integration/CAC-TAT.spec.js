@@ -60,7 +60,7 @@ describe('Visitando a página de teste - Central de Atendimento ao Cliente TAT',
         cy.get('#firstName').type('Francilene');
         cy.get('#lastName').type('Silva');
         cy.get('#email').type('fran.gmail.com');
-        cy.get('#phone-checkbox').check();
+        cy.get('#phone-checkbox').click();
         cy.get('#open-text-area').type('Teste'); // utilizando o delay (usar quando for escrever um texto longo)
         cy.get('button[type="submit"]').click();
 
