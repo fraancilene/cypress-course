@@ -25,4 +25,23 @@ describe('Visitando a página de teste - Central de Atendimento ao Cliente TAT',
             .should('have.value', 'blog');
     });
 
+    // INPUTS DO TIPO RADIO E CHECKBOX - .check()
+
+    it('Marca o tipo de atendimento "Feedback"', function(){
+        cy.get('input[type="radio"][value="feedback"]')
+            .check()
+            .should('have.value', 'feedback');
+    });
+
+    it('Marca o tipo de atendimento', function(){
+
+        cy.get('input[type="radio"]')
+            .should('have.length', 3)
+            .each(function($radio){ // verificando se os radios foram selecionados
+                cy.wrap($radio).check();
+                cy.wrap($radio).should('be.checked');
+            });
+    });
+
+
 });
