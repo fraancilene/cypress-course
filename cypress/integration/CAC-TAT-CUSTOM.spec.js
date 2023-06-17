@@ -15,7 +15,18 @@ describe('Visitando a página de teste - Central de Atendimento ao Cliente TAT',
 
     // outra forma de identificar elementos (outro comando - cy.contains)
 
-
+        // .only - para executar apenas esse teste
+        it.only('preenche os campos obrigatórios e envia o formulário, usando o cy.contains', function() {
+            cy.get('#firstName').type('Francilene');
+            cy.get('#lastName').type('Silva');
+            cy.get('#email').type('fran@gmail.com');
+            cy.get('#open-text-area').type('Teste');
+            cy.contains('button', 'Enviar').click();
+    
+            // verificação
+            cy.get('.success').should('be.visible');
+    
+        });
 
 
 });
